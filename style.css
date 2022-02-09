@@ -90,3 +90,18 @@ form button:hover {
 .todo-item {
   padding: 0rem 0.5rem;
 }
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  transition-duration: 0.5s;
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
