@@ -69,7 +69,7 @@ form button:hover {
   flex: 1;
 }
 
-.checked-btn,
+.complete-btn,
 .trash-btn {
   background: #2b2f3c95;
   color: white;
@@ -79,7 +79,7 @@ form button:hover {
   font-size: 1rem;
 }
 
-.checked-btn {
+.complete-btn {
   background-color: rgb(30, 138, 30);
 }
 
@@ -96,12 +96,44 @@ form button:hover {
   pointer-events: none;
 }
 
-.checked {
+.completed {
   text-decoration: line-through;
   opacity: 0.5;
 }
 .fall {
-  transition-duration: 0.5s;
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #2b2f3c95;
+  cursor: pointer;
+  width: 10rem;
+  padding: 1.2rem;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #4e5166;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.select:hover::after {
+  background-color: aliceblue;
+  color: #4e5166;
 }
